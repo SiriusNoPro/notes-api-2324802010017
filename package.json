@@ -1,0 +1,24 @@
+{
+  "name": "notes-api-2324802010017",
+  "version": "1.0.0",
+  "description": "Môi trường thực hành điện toán đám mây chạy trong **GitHub Codespaces trên trình duyệt**.",
+  "main": "index.js",
+  "scripts": {
+  "start": "node src/server.js",
+  "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SiriusNoPro/notes-api-2324802010017.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SiriusNoPro/notes-api-2324802010017/issues"
+  },
+  "homepage": "https://github.com/SiriusNoPro/notes-api-2324802010017#readme",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}

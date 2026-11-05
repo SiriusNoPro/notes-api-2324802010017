@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 1 - Hello Cloud API</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #f1f5f9;
+      color: #1e293b;
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(120deg, #0f172a, #1d4ed8);
+      color: white;
+      padding: 48px 20px;
+      text-align: center;
+    }
+    header h1 { margin: 0; font-size: 32px; }
+    header p { color: #dbeafe; }
+    main {
+      max-width: 1050px;
+      margin: 28px auto;
+      padding: 0 16px;
+    }
+    section {
+      background: white;
+      padding: 28px;
+      border-radius: 14px;
+      margin-bottom: 22px;
+      box-shadow: 0 3px 15px #0f172a0d;
+    }
+    h2 {
+      color: #1d4ed8;
+      border-bottom: 2px solid #dbeafe;
+      padding-bottom: 9px;
+    }
+    .table-wrap { overflow-x: auto; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      padding: 13px;
+      border: 1px solid #cbd5e1;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: #dbeafe; }
+    tr:nth-child(even) { background: #f8fafc; }
+    .feature {
+      border-left: 4px solid #2563eb;
+      padding: 12px 18px;
+      background: #eff6ff;
+      margin: 13px 0;
+      border-radius: 6px;
+    }
+    .feature strong { color: #1d4ed8; }
+    .note {
+      background: #fffbeb;
+      border-left: 4px solid #f59e0b;
+      padding: 14px;
+      border-radius: 6px;
+    }
+    a { color: #2563eb; overflow-wrap: anywhere; }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>BÀI 1 - HELLO CLOUD API</h1>
+  <p>Thực hành lập trình trên máy ảo đám mây</p>
+  <p>Học phần: Điện toán đám mây</p>
+</header>
+
+<main>
+
+<section>
+  <h2>1. Thông tin sinh viên</h2>
+  <p><strong>Họ và tên:</strong> Phan Nhật Đăng</p>
+  <p><strong>MSSV:</strong> 2324802010017</p>
+  <p><strong>Ngày thực hiện:</strong> 05/11/2026</p>
+  <p><strong>Nền tảng:</strong> GitHub Codespaces</p>
+  <p>
+    <strong>Repository:</strong>
+    <a href="https://github.com/SiriusNoPro/notes-api-2324802010017">
+      notes-api-2324802010017
+    </a>
+  </p>
+</section>
+
+<section>
+  <h2>2. Mục tiêu thực hành</h2>
+  <p>
+    Khởi tạo môi trường lập trình trên GitHub Codespaces,
+    xây dựng API Hello Cloud bằng Node.js và Express,
+    truy cập API qua Internet và đối chiếu trải nghiệm
+    với 5 đặc tính điện toán đám mây theo NIST.
+  </p>
+</section>
+
+<section>
+  <h2>3. Kết quả triển khai API</h2>
+  <p>
+    API được xây dựng bằng Node.js 22.23.4 và Express,
+    hoạt động trên cổng 3000 của GitHub Codespaces.
+  </p>
+  <p>
+    Khi gửi yêu cầu HTTP GET đến đường dẫn gốc (/),
+    máy chủ trả về dữ liệu JSON gồm:
+  </p>
+  <ul>
+    <li>message: Lời chào từ đám mây</li>
+    <li>host: Tên máy chủ</li>
+    <li>platform: Thông tin hệ điều hành</li>
+    <li>cpus: Số bộ xử lý logic</li>
+    <li>memoryGB: Tổng bộ nhớ theo API</li>
+    <li>uptimeSec: Thời gian hoạt động của hệ điều hành</li>
+    <li>time: Thời điểm phản hồi</li>
+  </ul>
+  <p>
+    <strong>Kết quả:</strong> API chạy thành công,
+    truy cập được từ trình duyệt máy tính và
+    điện thoại qua mạng 4G khi cổng được đặt Public.
+    Sau kiểm tra, cổng 3000 đã chuyển lại Private.
+  </p>
+</section>
+
+<section>
+  <h2>4. So sánh máy cá nhân và Codespaces</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Tiêu chí</th>
+          <th>Máy cá nhân</th>
+          <th>GitHub Codespaces</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Thời gian đến khi chạy node -v</td>
+          <td>Chưa đo</td>
+          <td>
+            Khoảng 17 phút theo mốc 13:21-13:38;
+            Terminal sẵn sàng lúc 13:36
+          </td>
+        </tr>
+        <tr>
+          <td>CPU</td>
+          <td>12 bộ xử lý logic (i5-12450H)</td>
+          <td>2 bộ xử lý logic</td>
+        </tr>
+        <tr>
+          <td>RAM</td>
+          <td>8 GB lắp đặt</td>
+          <td>7.8 GB theo API</td>
+        </tr>
+        <tr>
+          <td>Hệ điều hành</td>
+          <td>Windows 11 Home Single Language 25H2</td>
+          <td>Linux 6.8.0-1064-azure</td>
+        </tr>
+        <tr>
+          <td>Cách truy cập từ thiết bị khác</td>
+          <td>
+            Cần cấu hình mạng và khả năng
+            truy cập dịch vụ phù hợp
+          </td>
+          <td>
+            URL HTTPS của Codespaces,
+            cổng 3000 được đặt Public tạm thời
+          </td>
+        </tr>
+        <tr>
+          <td>Chi phí, cách đo</td>
+          <td>
+            Chi phí thiết bị, điện và Internet;
+            chưa đo chi phí thực tế
+          </td>
+          <td>
+            GitHub Billing Usage:
+            0.07 GB-month lưu trữ,
+            chi phí đã tính $0;
+            core-hours chưa hiển thị
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="note">
+    <strong>Ghi chú:</strong>
+    Số liệu lấy từ Windows Task Manager,
+    API Hello Cloud và GitHub Billing Usage.
+    Thời gian khởi tạo được ghi theo các mốc
+    người thực hiện cung cấp, không phải số liệu
+    bấm giờ tự động. Chưa có số đo node -v
+    trên máy cá nhân.
+  </p>
+</section>
+
+<section>
+  <h2>5. Năm đặc tính điện toán đám mây NIST</h2>
+
+  <div class="feature">
+    <strong>1. On-demand Self-service</strong>
+    <p>
+      Người dùng tự nhấn Create codespace on main
+      để yêu cầu cấp phát môi trường lập trình,
+      không cần quản trị viên thao tác thủ công.
+    </p>
+  </div>
+
+  <div class="feature">
+    <strong>2. Broad Network Access</strong>
+    <p>
+      API được truy cập từ máy tính và điện thoại
+      qua mạng 4G bằng URL HTTPS. Điều này
+      thể hiện khả năng truy cập qua mạng
+      bằng nhiều loại thiết bị.
+    </p>
+  </div>
+
+  <div class="feature">
+    <strong>3. Resource Pooling</strong>
+    <p>
+      Codespaces sử dụng hạ tầng điện toán do
+      GitHub cung cấp. Người dùng được cấp
+      môi trường có CPU, RAM và hostname riêng
+      mà không phải lựa chọn máy chủ vật lý.
+      Việc gộp tài nguyên được suy luận từ mô hình
+      dịch vụ, chưa được chứng minh trực tiếp
+      chỉ bằng hostname.
+    </p>
+  </div>
+
+  <div class="feature">
+    <strong>4. Rapid Elasticity</strong>
+    <p>
+      Môi trường Codespaces có thể được khởi tạo,
+      dừng và khởi động lại theo nhu cầu.
+      Bài thực hành cho thấy khả năng cấp phát
+      môi trường, nhưng chưa kiểm chứng
+      khả năng tự động tăng giảm CPU hoặc RAM.
+    </p>
+  </div>
+
+  <div class="feature">
+    <strong>5. Measured Service</strong>
+    <p>
+      GitHub Billing Usage ghi nhận mức sử dụng
+      lưu trữ Codespaces là 0.07 GB-month,
+      chi phí phải trả hiện tại là $0.
+      Đây là minh chứng cho việc theo dõi
+      và đo lường mức sử dụng tài nguyên.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>6. Nhận xét và kết luận</h2>
+  <p>
+    GitHub Codespaces giúp tạo môi trường lập trình
+    từ xa mà không cần tự cài đặt toàn bộ công cụ
+    trên máy cá nhân. Việc sử dụng URL HTTPS
+    giúp kiểm tra API trên nhiều thiết bị.
+  </p>
+  <p>
+    Tuy nhiên, thời gian khởi tạo thực tế trong
+    lần thử này dài hơn mục tiêu 2 phút.
+    Nền tảng còn phụ thuộc kết nối Internet,
+    giới hạn tài nguyên và chính sách sử dụng
+    của nhà cung cấp.
+  </p>
+  <p>
+    Việc tách app.js và server.js giúp tái sử dụng
+    phần ứng dụng trong những bài thực hành tiếp theo.
+  </p>
+</section>
+
+<section>
+  <h2>7. Tài liệu tham khảo</h2>
+  <p>
+    NIST SP 800-145 - The NIST Definition
+    of Cloud Computing.
+  </p>
+  <p>
+    <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf">
+      Xem tài liệu NIST SP 800-145
+    </a>
+  </p>
+  <p>
+    <a href="https://docs.github.com/en/codespaces">
+      GitHub Codespaces Documentation
+    </a>
+  </p>
+</section>
+
+</main>
+
+<footer>
+  Phan Nhật Đăng - 2324802010017
+  | Bài 1 - Hello Cloud API | 2026
+</footer>
+
+</body>
+</html>
